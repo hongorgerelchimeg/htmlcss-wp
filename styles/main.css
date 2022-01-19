@@ -8,7 +8,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 8px;
-    /* padding: 5px 8vw; */
+    
 } 
 h1 {
     font-size: 0.45rem;
@@ -27,13 +27,16 @@ h3 {
 }
 h4 {
     font-size: 0.25rem;
+    font-weight: 300;
     line-height: 1;  
 }
 h5 {
-    font-size: 0.2rem;  
+    font-size: 0.2rem;
+    font-weight: 400;  
 }
 p {
     font-size: 0.2rem;
+    color: #8b8b8b;
 }
 /* HEADER */
 .main-header {
@@ -100,6 +103,9 @@ section {
     max-width: 40vw;
     color: white;
   }
+.hero-text p {
+    color: white;
+}  
 /* MAIN CONTENT SECTION */
 .main-content-holder {
     width: 100%;
@@ -112,59 +118,94 @@ section {
 }
 .full-width {
     width: 100%;
-    height: auto;
+   
 }
-.grey {
-    background-color: #B6DBF2;
-}
+
 .float-item {
     float: left;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 5px;
     width: 14vw;
-    height: calc(50vh - 10px);
+    
     
 }
 .center-content {
     width: calc(100% - 28vw - 10px);
+
 }
 .last-content {
     margin-right: 0px;
 }
-/* "OBJECT FIT" fill or contain*/
+/* "OBJECT FIT" */
 .fill {
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
-    height: auto;
-    
+    height: 20vh;
+   
 }
-.main-img-holder {
-    border-radius: 2px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
+.fill-center {
+    object-fit: cover;
+    width: 100%;
+    height: 20vh;
+}
+/* FLOAT IMAGE AND FLOAT IMAGE GRADIENT*/ 
 
+.float-image {
+    position: relative;
+    display: inline-block;
+    width: 14vw;
+    height: 20vh;
+    border-radius: 2px;  
 }
+.float-image::after {
+  content:'';
+  display: inline-block;
+  position: absolute;
+  border-radius: 2px;
+  left:0; top:0;
+  width: 14vw;
+  height: 20vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+.float-image img {
+    display: block;
+}
+.float-image-center {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 20vh;
+    border-radius: 2px; 
+}
+.float-image-center::after {
+  content:'';
+  display: inline-block;
+  position: absolute;
+  border-radius: 2px;
+  left:0; top:0;
+  width: 100%;
+  height: 20vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+.float-image-center img {
+    display: block;
+}
+
 /* Footer */
 .footer-container {
     width: 100%;
-    /* height: 7vh; */
-    background-color: #7C05F2;
     text-align: center;
-    margin-top: 3px;
+    margin: 3px auto;
 
 }
 .inline-text {
-    display: inline;
-}
-.vertical-align-middle {
+    display: inline-block;
     vertical-align: middle;
 }
-.footer-heart {
+.footer-container span {
+    vertical-align: middle;
+    color: red;
     font-size: 0.3rem;
-}
-.crafted {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.2rem; 
-    line-height: 1;
-
+    
 }
